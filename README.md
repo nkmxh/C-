@@ -1,2 +1,2 @@
-# C-
+# mooc C++
 about C++ course
