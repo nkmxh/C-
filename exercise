@@ -1,0 +1,1880 @@
+/*1、求过平面上两点的直线的斜率
+#include <iostream>
+using namespace std;
+int main()
+{
+    double x1,x2,y1,y2,k;
+    cin>>x1>>y1;
+    cin>>x2>>y2;
+    k=(y2-y1)/(x2-x1);
+    cout<<k<<endl;
+    return 0;
+}
+
+2、计算平面上两点之间的距离
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    double x1,x2,y1,y2,distance;
+    cin>>x1>>y1;
+    cin>>x2>>y2;
+    distance=sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
+    cout<<distance<<endl;
+    return 0;
+}
+*/
+/*3、判断大小写
+#include <iostream>
+using namespace std;
+int main()
+{
+    char c;
+    cin>>c;
+    c>='A' && c<='Z'?cout<<1 : cout<<0;
+    return 0;
+}
+ */
+
+/*4、判断数字
+#include <iostream>
+using namespace std;
+int main()
+{
+    char c;
+    cin>>c;
+    c>='0' && c<='9'?cout<<1 : cout<<0;
+    return 0;
+}
+*/
+
+/*5、判断闰年
+#include <iostream>
+using namespace std;
+int main()
+{
+    int c;
+    cin>>c;
+    ( c%4==0 && c%100!=0 )|| (c%400==0)?cout<<"IsLeapYear" : cout<<"NotLeapYear";
+    return 0;
+}*/
+
+
+/*6、求商和余数
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a,b,c,d;
+    cin>>a>>b;
+    c=a/b;
+    d=a%b;
+    cout<< c <<" "<< d<<endl;
+    return 0;
+}*/
+
+/*7、计算平均分取整
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a,b,c,d,e,f,g;
+    float y;
+    cin>>a>>b>>c>>d>>e>>f>>g;
+    y=(a+b+c+d+e+f+g)/7.0;
+    y=int(y+0.5);
+    cout<< y<<endl;
+    return 0;
+}*/
+
+/*8、计算平均分取整
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    double a,b,c,x,y,d,z;
+    cin>>a>>b>>c;
+    cin>>x>>y;
+    z=a*x+b*y+c;
+    z<0 ? z=-z:z=z;
+    d=z/sqrt(a*a+b*b);
+    d=int(d*100+0.5)/100.00; // 保留两位小数
+    cout<< d<<endl;
+    return 0;
+}*/
+
+/*9、输入字符显示ASCII值
+#include <iostream>
+using namespace std;
+int main()
+{
+    char a;
+    cin>>a;
+    cout<<int(a)<<endl;
+    return 0;
+}*/
+
+/*10、输入整数显示十六进制
+#include <iostream>
+using namespace std;
+int main() {
+    int a;
+    cin >> a;
+    cout<<hex<<a; //显示n的十六进制形式。
+    return 0;
+}*/
+
+/*11、输入整数显示十六进制和八进制
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    int a,b;
+    cin>>a;
+    b=fabs(a);
+    a>=0? cout<<dec<<b<<' '<<hex<<b<<' '<<oct<<b: cout<<'-'<<dec<<b<<' '<<"-"<<hex<<b<<' '<<"-"<<oct<<b;
+
+    return 0;
+
+}*/
+
+/*12、温度转换
+#include <iostream>
+using namespace std;
+int main()
+{
+    float a,b;
+    cin>>a;
+    b=5./9*(a-32);
+    cout<<b;
+    return 0;
+}*/
+
+/*13、计算数学函数式的值
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    double x,y;
+    cin>>x;
+    y=sin(x*x)/(1-cos(x));
+    cout<<y;
+    return 0;
+}*/
+
+/*14、数据的简单统计
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    int a,b,c;
+    double x,y,z;
+    cin>>a>>b>>c;
+    x=a+b+c;  //sum
+    y=x/3.0;  //average
+    z=int(y+0.5);
+    cout<<x<<endl;
+    cout<<y<<endl;
+    cout<<z<<endl;
+    return 0;
+}*/
+
+/*15、找零钱
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a,b,c,d,e,f,g,a1,a2,a3,a4,a5;
+    cin>>a;
+    (a-50)>=0?a1=1:a1=0;
+    (a-50)>=0?b=a-50:b=a;
+    (b-40)>=0?a2=2:c=b;
+    (b-40)>=0?c=b-40:c=b;
+    (c-30)>=0?a2=1:d=c;
+    (c-30)>=0?a3=1:d=c;
+    (c-30)>=0?d=c-30:d=c;
+    (d-20)>=0?a2=1:e=d;
+    (d-20)>=0?a3=0:e=d;
+    (d-20)>=0?e=d-20:e=d;
+    (e-10)>=0?a3=1,f=-10:f=e;
+    (e-10)>=0?f=-10:f=e;
+    (f-5 )>=0?a4=1,g=f-5:g=f;
+    (f-5 )>=0?g=f-5:g=f;
+    a5=g;
+    cout<<a1<<' '<<a2<<' '<<a3<<' '<<a4<<' '<<a5;
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+int main() {//不想给你现成的代码。所以加了一些没用的东西。多了个2元的类目。
+
+    int prise,a1,a2,a3,a4,a5;
+    cin>>prise;
+
+    a1=prise/50;
+    prise%=50;
+
+    a2=prise/20;
+    prise%=20;
+    a3=prise/10;
+    prise%=10;
+    a4=prise/5;
+    prise%=5;
+    a5=prise/1;
+    prise%=1;
+    cout<<a1<<' '<<a2<<' '<<a3<<' '<<a4<<' '<<a5;
+
+    return 0;
+}*/
+/*16、小写转大写
+#include <iostream>
+using namespace std;
+int main()
+{
+    char a,b;
+    cin>>a;
+    a>='a'&& a<='z'? b=a-32:b=a;
+    cout<<b;
+    return 0;
+}*/
+
+/*17、当用户输入一个英文字母后，程序能够按照字母表的顺序打印出3个相邻的字母，其中用户输入的字母在中间。
+#include <iostream>
+using namespace std;
+int main()
+{
+    char a,b,c;
+    cin>>b;
+    if ('b'<=int(b)&& int(b)<='y')
+    {
+        a=char(int(b)-1);
+        c=char(int(b)+1);
+    }
+    if ('B'<=int(b)&& int(b)<='Y')
+    {
+        a=char(int(b)-1);
+        c=char(int(b)+1);
+    }
+    if(int(b)=='a'||int(b)=='A')
+    {
+        a=char(int(b)+25);
+        c=char(int(b)+1);
+    }
+    if(int(b)=='z'||int(b)=='Z')
+    {
+        a=char(int(b)-1);
+        c=char(int(b)-25);
+    }
+    cout<<a<<b<<c<<endl;
+    return 0;
+}*/
+
+
+/*18、歌唱大赛选手成绩计算方法如下：去掉一个最高分，去掉一个最低分，将剩下分数的平均值
+作为选手的最后成绩。这里假设共有10位评委，都是按照百分制打分。
+程序运行结果如下：
+88 90 97 89 85 95 77 86 92 83
+88.5
+如果评委给出的成绩不在0~100分之间，将给出错误提示。
+程序运行结果如下：
+101 90 97 89 85 95 77 86 92 83
+the score is invalid.
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+   int a [10];
+   int i,judge,temp,max,min,sum;
+   double grade;
+   for (i=0;i<10;i++)  //循环输入成绩
+   {
+       cin>>a[i];
+   }
+   judge=1;
+    for (int j = 0; j <10 ; j++) //循环结构判断成绩是否符合要求
+    {
+        if (a[j]<0||a[j]>100)
+        {
+
+            judge=0; //当出现成绩不在区间内的时候，judge=0
+            break;
+        }
+    }
+    if (judge==0) // the score is invalid.
+    {
+        cout<<"the score is invalid.";
+    }
+    else
+    {
+        temp=a[0];
+        //max grade
+        for (int j = 0; j <10 ; j++)
+        {
+            if (a[j]>=temp)
+            {
+                temp=a[j];
+            }
+        }
+        max=temp;
+        //min grade
+        for (int j = 0; j <10 ; j++)
+        {
+            if (a[j]<=temp)
+            {
+                temp=a[j];
+            }
+        }
+        min=temp;sum=0;
+        //成绩之和
+        for (int k = 0; k <10 ; k++)
+        {
+            sum=sum+a[k];
+        }
+        sum=sum-max-min;
+        grade=sum/8.0;
+        cout<<grade<<endl;
+    }
+    //88 90 97 89 85 95 77 86 92 83
+    return 0;
+}*/
+
+/*19、有一天，某只猴子摘了一些桃子，当时吃了一半，又不过瘾，于是就多吃了一个。
+以后每天如此，到第n天想吃时，发现就只剩下一个桃子。输入n，表示到第n天剩下1个桃子，
+ 请计算第一天猴子摘的桃子数。
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    int n,b;
+    b=1;
+    cin>>n;
+    for (int i = 0; i <n ; i++)
+    {
+        b=(b+1)*2;
+    }
+
+    cout<<b;
+    return 0;
+}*/
+
+/*20、现有n块砖，要由n人一次搬完，假定男人一次可以搬4块，女人一次可以搬3块，两个小孩搬1块，
+计算这n人中男人、女人和小孩的人数。输入人数和砖数n，输出可能的解决方案。
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    int n,flag;
+    cin>>n;
+    flag=0;
+    for (int i = 0; i <=(n); i++) {
+        for (int j = 0; j <=(n-4*i) ; j++) {
+            for (int k = 0; k <=2*(n-4*i-3*j) ; k++) {
+                if ((4*i+3*j+int(k*0.5)==n)&&(i+j+k==n))
+                {
+                    flag=1;
+                    cout<<"men"<<i<<endl;
+                    cout<<"women"<<j<<endl;
+                    cout<<"children"<<k<<endl;
+                }
+
+
+            }
+
+        }
+
+    }
+    if (flag==0)
+    {
+        cout<<"no result!";
+    }
+    return 0;
+}*/
+
+
+/*21、将n美分转换成25、10、5和1美分的硬币总共有多少种转换方法？
+ * 如果n不在0~99之间，输出提示信息“the money is invalid!”
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    int n,flag;
+    cin>>n;
+    flag=0;
+    if ((n>=0)&&(n<=99))
+    {
+        for (int i = 0; i <=(n); i++) {
+            for (int j = 0; j <=(n) ; j++) {
+                for (int k = 0; k <=(n) ; k++) {
+                    for (int l = 0; l <=(n) ; l++) {
+                        if (25*i+10*j+5*k+l==n)
+                        {
+                            flag=flag+1;
+                        }
+                    }
+                }
+            }
+        }
+        cout<<flag;
+    }
+    else
+    {
+        cout<<"the money is invalid!";
+    }
+
+
+    return 0;
+}*/
+
+/*22、编写程序，输入正整数，判断是奇数还是偶数，是奇数显示“odd”,是偶数显示“even”，
+ * 输入“1”显示“odd”。
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    int a;
+    cin>>a;
+    if (a%2==0)
+    {
+        cout<<"even";
+    }else
+    {
+        cout<<"odd";
+    }
+    return 0;
+}*/
+
+/*23、编写程序，输入实数，判断输入的数据是正实数、负实数、正整数、负整数、还是零，
+ * 分别显示“positive real”, “negative real”, “positive 。integer”,
+ * “negative integer”, “zero”，注意，两个单词的中间有一个空格。
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    double a;
+    cin>>a;
+    if(a>0)
+    {
+        if(int(a)==a)
+        {
+            cout << "positive integer";
+        } else
+        {
+            cout<<"positive real";
+        }
+    }
+    if(a==0)
+    {
+        cout<<"zero";
+    }
+    if(a<0)
+    {
+        if(int(a)==a)
+        {
+            cout << "negative integer";
+        } else
+        {
+            cout<<"negative real";
+        }
+    }
+}*/
+
+/*24、编写程序，输入平面直角坐标的x,y值，判断点在哪个象限。
+ * 不考虑在坐标轴上的情况。分别输出1、2、3或4。。
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    double x,y;
+    cin>>x>>y;
+    if  (x>0)
+    {
+        if(y>0)
+        {
+            cout<<"1";
+        }
+        if(y<0)
+        {
+            cout<<"4";
+        }
+    }
+    if  (x<0)
+    {
+        if(y>0)
+        {
+            cout<<"2";
+        }
+        if(y<0)
+        {
+            cout<<"3";
+        }
+    }
+
+    return 0;
+}*/
+/*24、显示n个字符
+ * 不考虑在坐标轴上的情况。分别输出1、2、3或4。。
+#include<iostream>
+using namespace std ;
+int main()
+{
+    int a;
+    cin>>a;
+    a=int(a/10);
+    switch (a)
+    {
+        case 10:
+        case 9:cout<<"5";break;
+        case 8:cout<<"4";break;
+        case 7:cout<<"3";break;
+        case 6:cout<<"2";break;
+        case 5:
+        case 4:
+        case 3:
+        case 2:
+        case 1:cout<<"1";break;
+        case 0:cout<<"0";break;
+    }
+    return 0;
+}*/
+
+/*25、显示n个字符
+#include<iostream>
+using namespace std ;
+int main()
+{
+    int a;
+    char b;
+    cin>>a>>b;
+    for (int i = 0; i <a ; i++) {
+        cout<<b;
+    }
+    return 0;
+}*/
+/*26、显示字符组成的矩形
+#include<iostream>
+using namespace std ;
+int main()
+{
+    int a,b;
+    char c;
+    cin>>a>>b>>c;
+    for (int i = 0; i <a ; i++){
+        for (int j = 0; j <b ; j++) {
+            cout<<c;
+        }
+        cout<<'\n';
+    }
+    return 0;
+
+}*/
+
+/*27、用循环计算1+2+3+...+n
+#include<iostream>
+using namespace std ;
+int main()
+{
+    int n,sum;
+    cin>>n;
+    sum=0;
+    for (int i = 0; i <=n ; i++) {
+        sum=sum+i;
+    }
+    cout<<sum;
+    return 0;
+}*/
+
+/*28、计算1+1/2+1/3+...+1/n
+#include<iostream>
+using namespace std ;
+int main()
+{
+    double n,sum;
+    sum=0;
+    cin>>n;
+    for (int i = 1; i <=n ;i++) {
+        sum=sum+(1.0/i);
+    }
+    cout<<sum;
+    return 0;
+}*/
+
+/*29、计算n！
+#include<iostream>
+using namespace std ;
+int main()
+{
+    int n,sum;
+    sum=1;
+    cin>>n;
+    for (int i = 1; i <= n; i++) {
+        sum=sum*i;
+    }
+    cout<<sum;
+    return 0;
+
+}*/
+
+/*30、计算n！
+#include<iostream>
+using namespace std ;
+int main()
+{
+    int i,n,flag=1;
+    cin>>n;
+    for (i = 1; i <n ; i++) {
+        cout<<flag<<' ';
+        flag=(-1)*flag;
+    }
+    if (i==n)
+    {
+        cout<<flag;
+    }
+
+    return 0;
+}*/
+/*31、判断整数的位数
+#include<iostream>
+using namespace std ;
+int main()
+{
+    int m,i=0;
+    cin>>m;
+    if (m==0)
+    {
+        cout<<"1";
+    } else
+        {
+            while (m!=0)
+            {
+                m=m/10;
+                i=i+1;
+            }
+            cout<<i;
+        }
+return 0;
+}*/
+/*32、求非负整数的各位数字的和
+#include<iostream>
+using namespace std ;
+int main()
+{
+    int n,sum=0;
+    cin>>n;
+    while (n!=0)
+    {
+        sum=sum+(n%10);
+        n=n/10;
+
+    }
+    cout<<sum;
+    return 0;
+}*/
+/*33、编写程序，显示如下的n行的九九乘法表。如输入5，，显示的乘法表如下
+#include<iostream>
+using namespace std ;
+int main()
+{
+    int n;
+    cin>>n;
+    for (int i = 1; i <=n ; i++) {
+        for (int j = 1; j <=i ; j++) {
+            cout<<i<<"*"<<j<<"="<<i*j;
+            if (j!=i)
+            {
+                cout<<" ";
+            }
+        }
+        cout<<endl;
+    }
+    return 0;
+}*/
+/*34、不一样的乘法表
+#include<iostream>
+using namespace std ;
+int main()
+{
+    int n;
+    cin>>n;
+    for (int i = n; i>=1 ; i--) {
+        for (int j = 1; j <=i ; j++) {
+            cout<<i<<"*"<<j<<"="<<i*j;
+            if (j!=i)
+            {
+                cout<<" ";
+            }
+
+        }
+        cout<<endl;
+
+    }
+    return 0;
+}*/
+
+/*35、Fibonacci序列
+#include<iostream>
+using namespace std ;
+int main()
+{
+        int n,F1,F2,sum;
+        cin>>n;
+        if(n==0)
+        {
+            cout<<"0";
+        }
+        if (n==1)
+        {
+            cout<<"0"<<" "<<"1";
+        }
+
+        if (n>=2){
+            cout<<"0"<<" "<<"1"<<" ";
+            F1=0,F2=1;
+            for (int i = 2; i <=n ; i++) {
+                sum=F1+F2;
+                cout<<sum;
+                if(i!=n)
+                {
+                    cout<<" ";
+                }
+                F1=F2;
+                F2=sum;
+            }
+        }
+            return 0;
+}*/
+
+/*36、计算公式的值(对数) 以a为底（x+sqrt(x*x+1)）的对数 （a>0,a不等于1）
+//若要算以 a 为底的对数：sum=log(x)/log(a); （换底公式）
+#include<iostream>
+#include <cmath>
+using namespace std ;
+int main()
+{
+    double x,a,f,g;
+    cin>>x>>a;
+    f=x+sqrt(x*x+1);
+    g=log(f)/log(a);
+    cout<<g;
+    return 0;
+}*/
+
+/*36、e的近似值
+//y=(1+1/n)^n
+#include<iostream>
+#include <cmath>
+using namespace std ;
+int main()
+{
+    int n;
+    double y,z;
+    cin>>n;
+    y=(1+1./n);
+    z=pow(y,n);
+    cout<<z;
+    return 0;
+}*/
+
+/*36、计算公式的值（三角等）
+//y=(1+1/n)^n
+#include<iostream>
+#include <cmath>
+using namespace std ;
+int main()
+{
+    double x,y;
+    cin>>x;
+    y=sin(x)-log(x)+sqrt(x)-5;
+    cout<<y<<endl;
+    return 0;
+}*/
+
+/*37、计算公式的值（开方）
+#include<iostream>
+#include <cmath>
+using namespace std ;
+int main()
+{
+    double x,y;
+    cin>>x;
+    y=x/(sqrt(x*x-3*x+2));
+    cout<<y;
+    return 0;
+}*/
+
+/*38、输入4字符的单词（小写)将每个字母转换为其在字母表中的序号（00-25）输出（不够两位的前面补0
+#include<iostream>
+#include <cmath>
+using namespace std ;
+int main()
+{
+    char  word[10];
+    int c;
+    cin>>word;
+    for (int i = 0; i <4 ; i++) {
+        c=int(word[i])-'a';
+        if(c>=10&&c<=25)
+        {
+            cout<<c;
+        }
+        if(c>=0&&c<=9)
+        {
+            cout<<"0"<<c;
+        }
+
+    }
+    return 0;
+}*/
+
+/*39、一个8位的整数。它的每两位代表一个字母在字母表中的序号（00-25）,编写程序，输入一个8位的整数（不够8位的前面补0）
+#include<iostream>
+#include <cmath>
+using namespace std ;
+int main()
+{
+    int n,k=4;
+    char word [100];
+    cin>>n;
+    for (int i = 4; i >0 ; i=i-1)
+    {
+        word[i-1]='a'+n%100;
+        n=n/100;
+    }
+    cout<<word;
+
+    return 0;
+}*/
+
+/*40、使用一个int变量（一般为4字节），保存4个均不超过255的非负整数
+ * ，输出这个int变量的值。例如输入 1 2 3 4，输出16909060。
+#include <iostream>
+using namespace std;
+int m=0;
+int main()
+{
+    int i=4;
+    while(i){
+        int n;
+        cin>>n;
+      //  BinaryRecursion(n);
+      //  cout<<endl;
+        m|=(n<<8*(--i));
+     //   BinaryRecursion(m);
+      //  cout<<endl;
+    }
+    cout<<m;
+    return 0;
+}
+void BinaryRecursion(int n)
+{
+    int a;
+    a=n%2;
+    n=n>>1;
+    if (n==0)
+        ;
+    else
+        BinaryRecursion(n);
+    cout<<a;
+}*/
+
+/*41、石头、剪刀、布分别用1,2,3表示。输入数字，输出相应的词，如果输入的数不是1,2,3，
+ * 输出“不认识”。
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    if (1<=n&&n<=3)
+    {
+        switch (n)
+        {
+            case 1:cout<<"石头";
+                break;
+            case 2:cout<<"剪刀";
+                break;
+            case 3:cout<<"布";
+                break;
+        }
+    }
+    else
+    {
+        cout<<"不认识";
+    }
+}*/
+
+/*42、排排坐分果果2。
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a,b,d;
+    cin>>a>>b;
+    for (int i = 1; i <=4; i++)
+    {
+        d=a+i*b-1;
+        if(d>10)
+        {
+            d=d%10;
+            if (d==0)
+            {
+                d=10;
+            }
+        }
+        cout<<d;
+        if (i!=4)
+        {
+            cout<<" ";
+        }
+    }
+
+}*/
+
+/*43、数组元素反序输出。
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n,num[100];
+    cin>>n;
+    for (int j = 0; j <n ; j++) {
+        cin>>num[j];
+    }
+    for (int i = n-1; i >=0 ; i--) {
+        cout<<num[i];
+        if (i!=0)
+        {
+            cout<<' ';
+        }
+    }
+    return 0;
+
+}*/
+
+/*44、求数组元素最大值。
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n[100],tem=(-9999);
+    for (int j = 0; j <100; j++) {
+        cin>>n[j];
+        if (n[j]==(-9999))
+        {
+            break;
+        }
+        if(n[j]>=tem)
+        {
+            tem=n[j];
+        }
+    }
+    cout<<tem;
+    return 0;
+}*/
+
+/*45、数组指定区间的元素的最大、最小、总和和平均值。
+#include <iostream>
+using namespace std;
+int main()
+{
+    double n[30]={-1,15,-40,-180,99,-122,-124,27,192,128,-165,95,161,-138, -183,51,107,39,-184,113,-63,9,107,188,-11,-13,151,-52,7,6};
+    double sum=0,max=-9999,min=9999,average=0;
+    int i,j;
+    cin>>i>>j;
+    if(i<j)
+    {
+        for (int k = i; k <j ; k++) {
+            if(n[k]>=max)
+            {
+                max=n[k];
+            }
+            if(n[k]<=min)
+            {
+               min=n[k];
+            }
+            sum=sum+n[k];
+
+        }
+        average=sum/(j-i);
+        cout<<max<<" "<<min<<" "<<sum<<" "<<average;
+    } else if (i>=j)
+    {
+        cout<<"0 0 0 0";
+    }
+}*/
+
+/*46、求矩阵每行元素最大值。
+#include <iostream>
+using namespace std;
+int main()
+{
+    int x,y,tem=(-9999),min;
+    int tee[20];
+    cin>>x>>y;
+    int ju[x][y];
+    for (int i = 0; i <x ; i++) {
+        for (int j = 0; j <y ; j++) {
+            cin>>ju[i][j];
+            if (ju[i][j]>=tem)
+            {
+                tem=ju[i][j];
+            }
+        }
+        tee[i]=tem;
+        tem=(-9999);
+    }
+
+    (x>=y?min=y:min=x);
+    for (int k = 0; k <min ; k++) {
+        cout<<tee[k]<<endl;
+    }
+    return 0;
+}*/
+
+/*47、求矩阵每列元素最大值
+#include <iostream>
+using namespace std;
+int main()
+{
+    int x,y,tem=-999;
+    int max[20];
+    cin>>x>>y;
+    int ju[x][y];
+    for (int i = 0; i <x ; i++) {
+        for (int j = 0; j <y ; j++) {
+            cin>>ju[i][j];
+        }
+    }
+
+    for (int k = 0; k <y ; k++) {
+        for (int z = 0; z <x ; z++) {
+            if(ju[z][k]>tem)
+            {
+              tem=ju[z][k];
+            }
+        }
+        max[k]=tem;
+        tem=-999;
+    }
+    for (int l = 0; l <y ; l++) {
+        cout<<max[l];
+        if(l!=(y-1)){
+            cout<<" ";
+        }
+    }
+    return 0;
+
+}*/
+
+/*48、计算向量的和
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    int v1[n],v2[n],sum[n];
+    for (int i = 0; i <n ; i++) {
+        cin>>v1[i];
+    }
+    for (int j = 0; j <n ; j++) {
+        cin>>v2[j];
+    }
+    for (int k = 0; k <n ; k++) {
+        sum[k]=v1[k]+v2[k];
+    }
+    for (int l = 0; l <n ; l++) {
+        cout<<sum[l];
+        if (l!=(n-1))
+        {
+            cout<<" ";
+        }
+    }
+    return 0;
+}*/
+
+/*49、计算向量的内积
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n,num=0;
+    cin>>n;
+    int v1[n],v2[n],product[n];
+    for (int i = 0; i <n ; i++) {
+        cin>>v1[i];
+    }
+    for (int j = 0; j <n ; j++) {
+        cin>>v2[j];
+    }
+    for (int k = 0; k <n ; k++) {
+        product[k]=v1[k]*v2[k];
+    }
+    for (int l = 0; l <n; l++) {
+        num=num+product[l];
+    }
+    cout<<num;
+}*/
+
+/*50、计算向量的范数
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    double v[n];
+    double sum=0,fan;
+    for (int i = 0; i <n ; i++) {
+        cin>>v[i];
+        sum=sum+v[i]*v[i];
+    }
+    fan=sqrt(sum);
+    cout<<fan;
+    return 0;
+}*/
+
+/*51、计算向量的欧氏距离
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    double v1[n],v2[n],mini[n],d,dis=0;
+    for (int i = 0; i <n ; i++) {
+        cin>>v1[i];
+    }
+    for (int j = 0; j <n ; j++) {
+        cin>>v2[j];
+    }
+    for (int k = 0; k <n ; k++) {
+        mini[k]=(v1[k]-v2[k])*(v1[k]-v2[k]);
+    }
+    for (int l = 0; l <n ; l++) {
+        dis=dis+mini[l];
+    }
+    d=sqrt(dis);
+    cout<<d;
+    return 0;
+}*/
+
+/*52、矩阵求和
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    //import
+    int n,m;
+    cin>>n>>m;
+    double h1[n][m],h2[n][m],sum[n][m];
+    for (int i = 0; i <n ; i++) {
+        for (int j = 0; j <m ; j++) {
+            cin>>h1[i][j];
+        }
+    }
+    for (int k = 0; k <n ; k++) {
+        for (int l = 0; l <m ; l++) {
+            cin>>h2[k][l];
+        }
+    }
+    //compute
+    for (int i1 = 0; i1 <n ; i1++) {
+        for (int i2 = 0; i2 <m ; i2++) {
+            sum[i1][i2]=h1[i1][i2]+h2[i1][i2];
+        }
+    }
+    //output
+    for (int k1 = 0; k1 <n ; k1++) {
+        for (int k2 = 0; k2 <m ; k2++) {
+            cout<<sum[k1][k2];
+            if(k2!=(m-1)){
+                cout<<" ";
+            }
+        }
+        cout<<endl;
+    }
+    return 0;
+}*/
+
+/*53、输入字符串，求长度
+#include <iostream>
+using namespace std;
+int main()
+{
+    int tem=0;
+    char s[100];
+    cin.get(s,100);
+    for (int i = 0; i <100 ; i++) {
+        if(s[i]=='\0')
+        {
+            break;
+        }
+        tem=tem+1;
+    }
+    cout<<tem;
+    return 0;
+}*/
+
+/*54、统计字符串中大写字母的数量
+#include <iostream>
+using namespace std;
+int main()
+{
+    int tem=0;
+    char s[200];
+    cin.get(s,200);
+    for (int i = 0; i <200 ; i++) {
+        if(s[i]=='\0')
+        {
+            break;
+        }
+        if(s[i]>='A'&&s[i]<'Z')
+        {
+            tem=tem+1;
+        }
+    }
+    cout<<tem;
+    return 0;
+}*/
+
+/*55、复制字符串
+#include <iostream>
+using namespace std;
+int main()
+{
+    int tem;
+    char s1[100],s2[100];
+    cin.get(s1,100);
+    for (int i = 0; i < 100; i++) {
+        if(s1[i]!='\0')
+        {
+            s2[i]=s1[i];
+        }
+        if(s1[i]=='\0'){
+            tem=i;
+            s2[i]='\0';
+            break;
+        }
+    }
+    for (int j = 0; j <tem ; j++) {
+        cout<<s2[j];
+    }
+    return 0;
+}*/
+
+/*56、字符串逆序
+#include <iostream>
+using namespace std;
+int main()
+{
+    char st[100],tem[100];
+    cin>>st;
+    int n=0;
+    while (st[n]!='\0')
+    {
+        n++;
+    }
+    n=n-1;
+    for (int i = 0; i <n ; i++) {
+        tem[i]=st[i];
+        st[i]=st[n-i];
+        st[n-i]=tem[i];
+        if (i>=(n/2))
+        { break;}
+    }
+    cout<<st;
+    return 0;
+}*/
+
+/*57、定义表示平面坐标点的结构体计算两点距离
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+struct point{
+    double x;
+    double y;
+};
+int main()
+{
+    point a,b;
+    double dis;
+    double tmp;
+    cin>>a.x>>a.y;
+    cin>>b.x>>b.y;
+    dis=sqrt((b.x-a.x)*(b.x-a.x)+(b.y-a.y)*(b.y-a.y));
+    cout<<dis;
+    return 0;
+}*/
+
+/*58、求两个数的和
+#include <iostream>
+#include <cmath>
+using namespace std;
+double sum(double a, double b)
+{
+    double z;
+    z=a+b;
+    return z;
+}
+int main()
+{
+    double sum(double,double);
+    double x,y,out;
+    cin>>x>>y;
+    out=sum(x,y);
+    cout<<out;
+    return 0;
+}*/
+
+/*59、求绝对值的函数
+#include <iostream>
+#include <cmath>
+using namespace std;
+double myfabs(double a)
+{
+    if(a<0)
+    {
+        a=-1*a;
+    }
+    return a;
+}
+int main()
+{
+    double x,y;
+    cin>>x;
+    y=myfabs(x);
+    cout<<y;
+    return 0;
+}*/
+
+/*59、x的k次方
+#include <iostream>
+#include <cmath>
+using namespace std;
+double mypow(double a,int b)
+{
+    double p=1;
+    if(a==0){
+        p=0;
+    }
+    if(a!=0){
+        if(b==0){
+            p=1;
+        }
+        if(b>0){
+            for (int i = 0; i <b ; i++) {
+                p=p*a;
+            }
+        }
+        if(b<0){
+            b=-b;
+            for (int i = 0; i <b ; i++) {
+                p=p/a;
+            }
+        }
+    }
+    return p;
+}
+int main()
+{
+    double x,ji;
+    int k;
+    cin>>x>>k;
+    ji=mypow(x,k);
+    cout<<ji;
+    return 0;
+}*/
+
+/*60、求n!的函数
+#include <iostream>
+#include <cmath>
+using namespace std;
+int njie(int a)
+{
+    int k=1;
+    if (a!=0){
+        for (int i = 1; i <=a ; i++) {
+            k=k*i;
+        }
+    }
+    return k;
+}
+int main()
+{
+   int n,ji;
+   cin>>n;
+   ji=njie(n);
+   cout<<ji;
+    return 0;
+}*/
+/*61、输入数组元素
+#include <iostream>
+#include <cmath>
+using namespace std;
+int fun(int b[])
+{
+    int t=0;
+    for (int i = 0; i < 100; i++) {
+        t++;
+        if (b[i]==-9999){
+            break;
+        }
+    }
+    return t;
+}
+int main()
+{
+    int a[100],i;
+    for (int i = 0; i <100 ; i++) {
+        cin>>a[i];
+        if (a[i]==-9999){
+            break;
+        }
+    }
+    i=fun(a)-1;
+    for (int j = i-1; j >=0 ; j--) {
+        cout<<a[j];
+        if(j!=0)
+        {cout<<' ';}
+    }
+    return 0;
+}*/
+
+/*62、输出数组元素值
+#include <iostream>
+#include <cmath>
+using namespace std;
+int fun(int b[])
+{
+    int t=0;
+    for (int i = 0; i < 100; i++) {
+        t++;
+        if (b[i]==-9999){
+            break;
+        }
+    }
+    return t;
+}
+void outfun(int a[])
+{
+    int fun(int b[]);
+    for (int i = 0; i <fun(a)-1 ; i++) {
+        cout<<a[i];
+        if(i!=fun(a)-2)
+        {cout<<' ';}
+    }
+}
+int main()
+{
+    int a[100],i;
+    for (int i = 0; i <100 ; i++) {
+        cin>>a[i];
+        if (a[i]==-9999){
+            break;
+        }
+    }
+    outfun(a);
+    return 0;
+}*/
+
+/*63、将数组元素逆序
+#include <iostream>
+using namespace std;
+int infun(int (&ba)[100]) //输入数组function
+{
+    int t=-1;
+    for (int i = 0; i <100 ; i++) {
+        t++;
+        cin>>ba[i];
+        if (ba[i]==-9999){
+            break;
+        }
+    }
+    return t;
+}
+void outfun(int a[],int h)  //  显示数组
+{
+    for (int i = 0; i <h ; i++) {
+       if (a[i]==-9999){
+           break;
+       }
+        cout<<a[i];
+        if(i!=h-1)
+        {cout<<' ';}
+    }
+}
+void transit(int (&ba)[100],int h) //transit
+{
+    h=h-1;
+    int tem[100];
+    for (int i = 0; i <=h/2 ; i++) {
+        tem[i]=ba[i];
+        ba[i]=ba[h-i];
+        ba[h-i]=tem[i];
+    }
+
+
+}
+
+int main()
+{
+    int a[100],t;
+    t=infun(a);
+    transit(a,t);
+    outfun(a,t);
+    return 0;
+}*/
+
+/*64、求数组元素的和
+#include <iostream>
+using namespace std;
+int infun(int (&ba)[100]) //输入数组function
+{
+    int t=-1;
+    for (int i = 0; i <100 ; i++) {
+        t++;
+        cin>>ba[i];
+        if (ba[i]==-9999){
+            break;
+        }
+    }
+    return t;
+}
+int  sum(int z[],int t)
+{
+    int tem=0;
+    for (int i = 0; i <t ; i++) {
+        tem=tem+z[i];
+    }
+    return tem;
+}
+int main()
+{
+    int a[100],t,he;
+    t=infun(a);
+    he=sum(a,t);
+    cout<<he;
+    return 0;
+}*/
+
+/*65、求字符串的长度的函数
+#include <iostream>
+using namespace std;
+int along (char a[100])
+{
+    int tem=0,i=0;
+    while (a[i]!='\0')
+    {
+      tem++;
+      i++;
+    }
+    return tem;
+}
+int main()
+{
+    char x[100];
+    cin>>x;
+    int t;
+    t=along(x);
+    cout<<t;
+    return 0;
+}*/
+
+/*66、字符串转大写
+#include <iostream>
+using namespace std;
+void zhuan(char (&ba)[200])
+{
+    int n=0;
+    for (int i = 0; i <200 ; i++) {
+        if (ba[i]=='\0'){
+            break;
+        }
+        n++;
+    }
+    for (int j = 0; j <n ; j++) {
+        if(ba[j]>='a'&&ba[j]<='z')
+        {
+            ba[j]=char(int(ba[j])-32);
+        }
+    }
+}
+int main()
+{
+    char a[200];
+    cin>>a;
+    zhuan(a);
+    cout<<a;
+    return 0;
+}*/
+
+/*67、字符串复制函数
+#include <iostream>
+using namespace std;
+void  zhuan(char (&ba)[100],char (&bc)[100])
+{
+    int n=0;
+    for (int i = 0; i <100 ; i++) {
+        if(ba[i]=='\0'){
+            break;
+        }
+        n++;
+    }
+    for (int j = 0; j <=n ; j++) {
+        bc[j]=ba[j];
+    }
+    bc[n+1]='\0';
+}
+int main()
+{
+    char a[100],c[100];
+    cin.getline(a,100);
+    zhuan(a,c);
+    cout<<c;
+    return 0;
+}*/
+
+/*68、字符串比较函数
+#include <iostream>
+using namespace std;
+int bijiao(char a[200],char b[200])
+{
+
+    int tem=0,n=2,i1=0,i2=0,jjj=0;
+    for (int j = 0; j <200 ; j++) {
+        if(a[j]=='\0')
+        {
+            break;
+        }
+        i1++;
+    }
+    for (int k = 0; k <200 ; k++) {
+        if(b[k]=='\0')
+        {
+            break;
+        }
+        i2++;
+    }
+//cout<<"ff"<<i1<<i2<<"gg"<<endl;
+    if (i1==i2){
+        for(int l=0;l<i1;l++){
+            if(int(a[l])==int(b[l])){
+                jjj++;
+            }
+        }
+     //   cout<<"jjj:"<<jjj<<endl;
+        if(jjj==i1){
+            n=0;
+        } else{
+            int(a[jjj])<int(b[jjj])?n=-1:n=1;
+
+        }
+    } else {
+        while (int(a[tem]) == int(b[tem])) {
+            tem++;
+        }
+        n=tem;
+        int(a[tem])<int(b[tem])?n=-1:n=1;
+    }
+
+    return n;
+}
+int main()
+{
+    int t;
+    char x[200],y[200];
+    cin>>x;
+    cin>>y;
+    t=bijiao(x,y);
+    cout<<t;
+    return 0;
+}*/
+
+/*69、计算1!+2!+3!+…+n!
+#include <iostream>
+using namespace std;
+int jiecheng(int n)
+{
+    int x=1;
+
+        for (int i = 1; i <=n ; i++) {
+            x=x*i;
+        }
+    return x;
+}
+int main()
+{
+    int a,sum=0;
+    cin>>a;
+    for (int i = 1; i <=a ; i++) {
+       sum= sum+jiecheng(i);
+    }
+    cout<<sum;
+    return 0;
+}*/
+/*70、a+aa+aaa
+#include <iostream>
+#include <cmath>
+using namespace std;
+int ppow(int b)
+{
+    int s=1;
+    for (int i = 0; i <b; ++i) {
+        s=s*10;
+    }
+    return s;
+
+}
+int hhh(int x,int n)
+{
+    int sum=0;
+    for (int i = 0; i <n ; i++) {
+        sum=x*ppow(i)+sum;
+    }
+    return sum;
+}
+int main()
+{
+    int x,n,ssum=0;
+    cin>>x>>n;
+    for (int i = 1; i <=n ; i++) {
+       ssum=ssum+hhh(x,i);
+    }
+    cout<<ssum;
+    return 0;
+}*/
+/*71、arcsin(x)
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int jiecheng(int n)// n!
+{
+    int x=1;
+
+    for (int i = 1; i <=n ; i++) {
+        x=x*i;
+    }
+    return x;
+}
+double dmi(double x,int n)//double  x^n
+{
+    double ji=1;
+    for (int i = 0; i <n ; i++) {
+        ji=ji*x;
+    }
+    return ji;
+}
+double imi(int x,int n)// int 2^n
+{
+    double ji=1;
+    for (int i = 0; i <n ; i++) {
+        ji=ji*x;
+    }
+    return ji;
+}
+double dan(double x,int n)
+{
+    double fan,s1,s2,x1,x2,x3;
+    s1=jiecheng(2*n);
+    s2=dmi(x,2*n+1);
+    x1=imi(2,2*n);
+    x2=jiecheng(n)*jiecheng(n);
+    x3=2*n+1;
+    fan=s1*s2/x1/x2/x3;
+    return fan;
+}
+int main()
+{
+    double x,outcome=0,tem=0;
+    cin>>x;
+    for (int i = 0; i <100 ; i++) {
+
+
+        dan(x,i)<0?tem=-1*dan(x,i):tem=dan(x,i);
+        if (tem<1E-8){
+            break;
+        }
+        outcome=outcome+dan(x,i);
+    }
+    cout<<outcome;
+    return 0;
+}*/
+
+/*71、回文数
+#include <iostream>
+#include <cmath>
+using namespace std;
+int iweishu(int n)// 计算位数
+{
+    int m=1;
+    while(n/10){
+        m++;
+        n=n/10;
+    }
+    return m;
+}
+void save(int (&nt)[100], int n, int t)//把数保存到数组里
+{
+    int tem;
+    for (int i = 0; i <t; i++) {
+        nt[i]=n%10;
+        n=n/10;
+    }
+}
+int main()
+{
+    int n,m=0,t,count=0;
+    cin>>n;
+    t=iweishu(n);
+    int tem[100];
+    save(tem,n,t);
+    for (int i = 0; i <=t/2 ; i++) {
+        if (tem[i]!=tem[t-i-1])
+        {
+            count=1;
+            break;
+        }
+    }
+
+    count==0?cout<<"YES":cout<<"NO";
+
+    return 0;
+}
+*/
+/*72、整数的素数因子分解*/
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    int k,g,sum=0,dan,outcome;
+    cin>>k;
+    cin>>g;
+    for (int i = g; i/2>=1 ; i=i-2) {
+        dan=k*pow(k-1,i/2);
+        sum=sum+dan;
+    }
+
+    outcome=sum;
+    cout<<outcome;
+
+    return 0;
+}
